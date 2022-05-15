@@ -14,23 +14,23 @@ int main()
 	int x=0,a,b,c=0,i=0,j=0;
 	char y[100],d[100];
 	struct Student *header;
-	header=NULL;//µ±Ç°µÄ½ÚµãÖĞÖ¸ÏòÏÂÒ»¸ö½ÚµãµÄÖ¸Õë±äÁ¿ÖµÓÀÔ¶ÎªNULL 
+	header=NULL;//å½“å‰çš„èŠ‚ç‚¹ä¸­æŒ‡å‘ä¸‹ä¸€ä¸ªèŠ‚ç‚¹çš„æŒ‡é’ˆå˜é‡å€¼æ°¸è¿œä¸ºNULL 
 	struct Student *p;
-	printf("»¶Ó­À´µ½Ñ§ÉúĞÅÏ¢¹ÜÀíÏµÍ³\n");
+	printf("æ¬¢è¿æ¥åˆ°å­¦ç”Ÿä¿¡æ¯ç®¡ç†ç³»ç»Ÿ\n");
 	
 	while(1)
 	{
-		printf("ÊäÈëÑ§ÉúĞÅÏ¢Çë°´1\n");
-		printf("²éÑ¯Ñ§ÉúĞÅÏ¢Çë°´2\n");
-		printf("É¾³ıÑ§ÉúĞÅÏ¢Çë°´3\n");
-		printf("´òÓ¡ËùÓĞÑ§ÉúĞÅÏ¢Çë°´4\n"); 
-		printf("ÍË³öÏµÍ³Çë°´5\n");
-		scanf("%d",&x) || scanf("%s",&y); //·ÀÖ¹ÓÃ»§ÎŞĞ§ÊäÈë  
+		printf("è¾“å…¥å­¦ç”Ÿä¿¡æ¯è¯·æŒ‰1\n");
+		printf("æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯è¯·æŒ‰2\n");
+		printf("åˆ é™¤å­¦ç”Ÿä¿¡æ¯è¯·æŒ‰3\n");
+		printf("æ‰“å°æ‰€æœ‰å­¦ç”Ÿä¿¡æ¯è¯·æŒ‰4\n"); 
+		printf("é€€å‡ºç³»ç»Ÿè¯·æŒ‰5\n");
+		scanf("%d",&x) || scanf("%s",&y); //é˜²æ­¢ç”¨æˆ·æ— æ•ˆè¾“å…¥  
 		if(x==1)
 		{
-			printf("ÇëÒÀ´ÎÊäÈëÑ§ÉúµÄÑ§ºÅ£¬ĞÕÃû£¬ÄêÁä£¬ĞÔ±ğ(ÓÃ¿Õ¸ñ¸ô¿ª)\n");
+			printf("è¯·ä¾æ¬¡è¾“å…¥å­¦ç”Ÿçš„å­¦å·ï¼Œå§“åï¼Œå¹´é¾„ï¼Œæ€§åˆ«(ç”¨ç©ºæ ¼éš”å¼€)\n");
 			scanf("%d %s %d %s",&student[i].stuID,&student[i].stuName,&student[i].stuAge,&student[i].stuGen); 
-			switch(i)//Éú³ÉÁ´±í 
+			switch(i)//ç”Ÿæˆé“¾è¡¨ 
 			{
 				case 0: header =&student[i];
 						student[i].next=NULL;
@@ -40,19 +40,19 @@ int main()
 						  break;
 			}
 			i++;
-			system("CLS");//ÇåÀíÆÁÄ» ,Òş²ØÊäÈëµÄÑ§ÉúĞÅÏ¢ 
-			printf("ĞÅÏ¢Â¼Èë³É¹¦\n");
+			system("CLS");//æ¸…ç†å±å¹• ,éšè—è¾“å…¥çš„å­¦ç”Ÿä¿¡æ¯ 
+			printf("ä¿¡æ¯å½•å…¥æˆåŠŸ\n");
 		}
 		else if(x==2)
 		{
-			printf("ÇëÊäÈë´ı²éÑ¯µÄÑ§ÉúµÄÑ§ºÅ:\n");
+			printf("è¯·è¾“å…¥å¾…æŸ¥è¯¢çš„å­¦ç”Ÿçš„å­¦å·:\n");
 			scanf("%d",&a);
 			p=header; 
 			while(p!=NULL)
 			{
 				if((*p).stuID==a)
 				{
-					printf("ĞÕÃû:%s ÄêÁä:%d ĞÔ±ğ:%s\n",(*p).stuName,(*p).stuAge,(*p).stuGen);
+					printf("å§“å:%s å¹´é¾„:%d æ€§åˆ«:%s\n",(*p).stuName,(*p).stuAge,(*p).stuGen);
 					break;
 				}
 				else
@@ -61,22 +61,22 @@ int main()
 		}
 		else if(x==3)	
 		{
-			printf("ÇëÊäÈë´ıÉ¾³ıÑ§ÉúµÄÑ§ºÅ:\n");
+			printf("è¯·è¾“å…¥å¾…åˆ é™¤å­¦ç”Ÿçš„å­¦å·:\n");
 			scanf("%d",&b);
 			p=header;
 			while(p!=NULL)
 			{
-				if(b==student[0].stuID)//É¾³ıµÄÑ§ÉúĞÅÏ¢ÎªµÚÒ»¸ö 
+				if(b==student[0].stuID)//åˆ é™¤çš„å­¦ç”Ÿä¿¡æ¯ä¸ºç¬¬ä¸€ä¸ª 
 				{
 					header=NULL;
-					printf("É¾³ı³É¹¦\n");
+					printf("åˆ é™¤æˆåŠŸ\n");
 					break;
 				}
-				else if(p->stuID==b)//É¾³ıµÄÑ§ÉúĞÅÏ¢²»ÎªµÚÒ»¸ö 
+				else if(p->stuID==b)//åˆ é™¤çš„å­¦ç”Ÿä¿¡æ¯ä¸ä¸ºç¬¬ä¸€ä¸ª 
 				{
 					student[j-1].next=student[j].next;
 					student[j].next=NULL;
-					printf("É¾³ı³É¹¦\n");
+					printf("åˆ é™¤æˆåŠŸ\n");
 						break;
 				}
 				else
@@ -88,14 +88,14 @@ int main()
 		}
 		else if(x==4)
 		{
-			printf("ÊÇ·ñÑ¡ÔñÇåÀíÆÁÄ»ËùÒÔÏÔÊ¾?(1±íÊ¾Í¬Òâ£¬ÆäËûÈÎÒâ¼ü±íÊ¾¾Ü¾ø)\n");
+			printf("æ˜¯å¦é€‰æ‹©æ¸…ç†å±å¹•æ‰€ä»¥æ˜¾ç¤º?(1è¡¨ç¤ºåŒæ„ï¼Œå…¶ä»–ä»»æ„é”®è¡¨ç¤ºæ‹’ç»)\n");
 			scanf("%d",&c) || scanf("%s",&d);
 			if(c==1)
 				system("CLS");
 			p=header;
 			while(p!=NULL)
 			{
-				printf("Ñ§ºÅ:%d ĞÕÃû:%s ÄêÁä:%d ĞÔ±ğ:%s\n",p->stuID,p->stuName,p->stuAge,p->stuGen);
+				printf("å­¦å·:%d å§“å:%s å¹´é¾„:%d æ€§åˆ«:%s\n",p->stuID,p->stuName,p->stuAge,p->stuGen);
 				p=p->next;
 			}
 		}
@@ -105,7 +105,7 @@ int main()
 		}
 		else
 		{
-			printf("ÄãµÄÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈë\n");
+			printf("ä½ çš„è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥\n");
 			continue;	
 		}
 	}
